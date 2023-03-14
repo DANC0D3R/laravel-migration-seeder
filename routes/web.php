@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+// MODEL
+use App\Models\Train;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $trains = Train::all();
+    
+    return view('welcome', ['trains'=>$trains]);
 });

@@ -10,6 +10,6 @@
         @vite('resources/js/app.js')
     </head>
     <body>
-        
+        @dd($trains)
     </body>
 </html>

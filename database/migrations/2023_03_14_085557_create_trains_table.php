@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
             // - Azienda - TIPO: Stringa
-            $table->string('company', 64);
+            $table->enum('company', ['TrenItalia', 'Italo']);
             // - Stazione di partenza - TIPO: STRINGA
             $table->string('departure_station', 128);
             // - Stazione di arrivo - TIPO: STRINGA

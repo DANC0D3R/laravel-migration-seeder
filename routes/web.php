@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\TrainController;
 
 // MODEL
 use App\Models\Train;
@@ -15,8 +16,4 @@ use App\Models\Train;
 |
 */
 
-Route::get('/', function () {
-    $trains = Train::all();
-    
-    return view('welcome', ['trains'=>$trains]);
-});
+Route::get('/', [TrainController::class,'index'])->name('home');
